@@ -1,27 +1,25 @@
-import Loading from "./Loading";
+import React from 'react'
 
-const Cards = ({ dog, loading, UpdateDog }) => {
+const Cards = ({ items }) => {
 
-    if(loading) return <Loading />
-
-
-    return (
+    return ( 
         <>
-            <div className="d-flex justify-content-center">
-                <div  className="card mt-4" style={{ width: "20rem" }} onClick={() => UpdateDog(dog.breed.id)}>
-                    <img src={dog.image} style={{ width: "20rem" }} className="card-img-top border border-dark " alt="dog" />
-                    <div className="card-body">
-                        <h5 className="card-title text-center">ID: {dog.breed.id} <br />
-                            {dog.breed.name}</h5>
-                        <p className="card-text">{dog.breed.temperament}</p>
-                        <div className="d-flex justify-content-center">
-                            <button to="/" className="btn btn-outline-dark">Go somewhere</button>
-                        </div>
+            {
+            items.length > 0 && items.map((item, i) => (
+                
+                <div key={i} className="card border-success mb-3" style={{ width: "18rem" }}>
+                    <div className="card-header">{item.id}</div>
+                    <div className="card-body text-success">
+                        <h5 className="card-title">{item.nombre}</h5>
+                        <p className="card-text">{item.apellido}</p>
                     </div>
                 </div>
-            </div>
-        </>
-    )
+                    ))         
+                    
+            }
+       </>
+
+            )
 }
 
-export default Cards;
+            export default Cards
