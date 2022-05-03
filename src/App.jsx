@@ -1,19 +1,20 @@
 import React from 'react'
-import Frutas from "./componente/Frutas"
+import { Outlet } from 'react-router-dom';
+import NavBar from './componente/NavBar';
+
 
 
 const App = () => {
-  
 
   return (
+
     <div>
-        <h1>App</h1>
-      
-       <Frutas />
-        
+      <NavBar />
+      <div className='container mt-4 ms-4'>
+       <Outlet />
+      </div>
     </div>
   )
 }
 
 export default App;
-    
