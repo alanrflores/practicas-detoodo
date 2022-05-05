@@ -1,6 +1,8 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom';
+
 import NavBar from './componente/NavBar';
+
 
 
 
@@ -10,8 +12,8 @@ const App = () => {
 
     <div>
       <NavBar />
-      <div className='container mt-4 ms-4'>
-       <Outlet />
+      <div className='container-fluid mx-auto'>
+        <Outlet />
       </div>
     </div>
   )

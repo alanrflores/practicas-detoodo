@@ -24,11 +24,11 @@ const Pagination = ({ updateGames, next, previous, loading, page, setPage }) => 
 
     return (
 
-        <div className="d-flex m-2 p-2">
+        <div className="d-flex justify-content-center mt-4">
             <button className="btn btn-outline-success border-0" onClick={lastPage}>
                 <div>👈</div>
             </button>
-            <div className="d-flex flex-wrap align-content-center m-2 fw-bold">{page} de {total}</div>
+            <div className=" m-2 fw-bold">{page} de {total}</div>
             <button className="btn btn-outline-success border-0" onClick={nextPage}>
                 <div>👉</div>
             </button>
